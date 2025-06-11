@@ -5,6 +5,7 @@ import json
 import sys
 import logging
 import os
+import matplotlib.pyplot as plt
 
 # Configure logging for Docker Desktop viewing
 logging.basicConfig(
@@ -40,3 +41,10 @@ X_pca = pca.transform(X_scaled)
 # Predict
 y_pred = svm.predict(X_pca)
 logging.info(f"Predicted Number: {y_pred[0]}")
+
+# Save the 8x8 image as a PNG
+img = np.array(input_values).reshape(8, 8)
+plt.imshow(img, cmap='gray')
+plt.axis('off')
+plt.savefig("output.png", bbox_inches='tight', pad_inches=0)
+plt.close()
