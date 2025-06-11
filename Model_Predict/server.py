@@ -1,10 +1,15 @@
+import os
+os.environ["PYTHONWARNINGS"] = "ignore"
+
+import warnings
+warnings.filterwarnings("ignore")
+
 import pandas as pd
 import joblib
 import numpy as np
 import json
 import sys
 import logging
-import os
 import matplotlib.pyplot as plt
 
 # Configure logging for Docker Desktop viewing
