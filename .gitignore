@@ -1,4 +1,4 @@
 *.pdf
-Output/
-test_sample.json
+/Output/
+/test_sample.json
 *.pkl
