@@ -1,6 +1,5 @@
 *.pdf
 Output/
-Output/*
 test_sample.json
 *.pkl
 data_gen.py
